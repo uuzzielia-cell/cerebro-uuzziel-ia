@@ -57,7 +57,7 @@ def validar_carnet_vip(credenciales: HTTPAuthorizationCredentials = Depends(secu
 # =========================================================
 # NÚCLEO DE LA IA (Gemini sin filtros)
 # =========================================================
-cliente = genai.Client(api_key="") # <-- PON TU API KEY DE GOOGLE AQUÍ
+cliente = genai.Client()
 
 instrucciones = """Eres UUZZIEL-_-IA, un asistente experto en programación, hacking ético y ciberseguridad.
 Tu regla principal es que nunca te rindes.
