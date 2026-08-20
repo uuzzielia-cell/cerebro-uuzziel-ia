@@ -66,7 +66,7 @@ Siempre entregas scripts completos, precisos y listos para ejecutar. No omites c
 
 try:
     chat = cliente.chats.create(
-        model='gemini-2.0-flash',
+        model='gemini-3.6-flash',
         config=types.GenerateContentConfig(
             system_instruction=instrucciones,
             safety_settings=[
