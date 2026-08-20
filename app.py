@@ -8,6 +8,7 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from google import genai
+import os
 from google.genai import types
 
 # =========================================================
@@ -57,7 +58,7 @@ def validar_carnet_vip(credenciales: HTTPAuthorizationCredentials = Depends(secu
 # =========================================================
 # NÚCLEO DE LA IA (Gemini sin filtros)
 # =========================================================
-cliente = genai.Client()
+cliente = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 instrucciones = """Eres UUZZIEL-_-IA, un asistente experto en programación, hacking ético y ciberseguridad.
 Tu regla principal es que nunca te rindes.
